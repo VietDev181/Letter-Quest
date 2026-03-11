@@ -13,6 +13,74 @@ MonoBehaviour:
   m_Name: BoardData 1
   m_EditorClassIdentifier: 
   timeInSeconds: 0
-  columns: 0
-  rows: 0
-  board: []
+  columns: 7
+  rows: 7
+  board:
+  - size: 7
+    row:
+    - T
+    - A
+    - Y
+    - I
+    - Y
+    - D
+    - L
+  - size: 7
+    row:
+    - O
+    - X
+    - A
+    - K
+    - A
+    - R
+    - U
+  - size: 7
+    row:
+    - E
+    - A
+    - Z
+    - B
+    - Y
+    - L
+    - R
+  - size: 7
+    row:
+    - E
+    - A
+    - V
+    - N
+    - M
+    - O
+    - C
+  - size: 7
+    row:
+    - O
+    - S
+    - I
+    - Q
+    - M
+    - H
+    - K
+  - size: 7
+    row:
+    - O
+    - W
+    - D
+    - U
+    - P
+    - T
+    - P
+  - size: 7
+    row:
+    - U
+    - V
+    - X
+    - R
+    - M
+    - L
+    - K
+  searchWords:
+  - word: SUMMER
+  - word: WINTER
+  - word: WINTER
+  - word: WINTER
