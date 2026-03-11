@@ -13,72 +13,44 @@ MonoBehaviour:
   m_Name: BoardData 1
   m_EditorClassIdentifier: 
   timeInSeconds: 0
-  columns: 7
-  rows: 7
+  columns: 5
+  rows: 5
   board:
-  - size: 7
+  - size: 5
     row:
-    - T
-    - A
-    - Y
-    - I
-    - Y
-    - D
-    - L
-  - size: 7
-    row:
-    - O
-    - X
-    - A
-    - K
-    - A
-    - R
-    - U
-  - size: 7
-    row:
-    - E
-    - A
-    - Z
-    - B
-    - Y
-    - L
-    - R
-  - size: 7
-    row:
-    - E
-    - A
-    - V
-    - N
-    - M
-    - O
-    - C
-  - size: 7
-    row:
-    - O
-    - S
-    - I
     - Q
-    - M
-    - H
-    - K
-  - size: 7
-    row:
-    - O
     - W
-    - D
+    - Y
+    - G
+    - N
+  - size: 5
+    row:
+    - R
+    - Y
+    - F
+    - S
+    - L
+  - size: 5
+    row:
+    - W
+    - J
+    - B
+    - M
+    - K
+  - size: 5
+    row:
     - U
-    - P
+    - G
+    - K
     - T
     - P
-  - size: 7
+  - size: 5
     row:
-    - U
-    - V
-    - X
-    - R
-    - M
-    - L
-    - K
+    - A
+    - O
+    - E
+    - T
+    - I
   searchWords:
   - word: SUMMER
   - word: WINTER
