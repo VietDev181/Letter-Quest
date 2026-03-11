@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine.UI;
 using TMPro;
+using System.Text.RegularExpressions;
 
 [CustomEditor(typeof(BoardData), false)]
 [CanEditMultipleObjects]
@@ -16,17 +17,7 @@ public class BoardDataDrawer : Editor
 
     private void OnEnable()
     {
-        _dataList = new ReorderableList(serializedObject, serializedObject.FindProperty("board"), true, true, true, true);
-        _dataList.drawHeaderCallback = (Rect rect) =>
-        {
-            EditorGUI.LabelField(rect, "Board");
-        };
-
-        _dataList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
-        {
-            var element = _dataList.serializedProperty.GetArrayElementAtIndex(index);
-            EditorGUI.PropertyField(rect, element);
-        };
+        InitializeReordableList(ref _dataList, "searchWords", "Search Words");
     }
 
     public override void OnInspectorGUI()
@@ -36,10 +27,20 @@ public class BoardDataDrawer : Editor
 
         EditorGUILayout.Space();
 
+        ConvertToUpperButton();
+
         if (gameDataInstance.board != null && gameDataInstance.columns > 0 && gameDataInstance.rows > 0)
         {
             DrawBoradTable();
         }
+
+        GUILayout.BeginHorizontal();
+        ClearBoardButton();
+        FillUpWithRandomLettersButton();
+        GUILayout.EndHorizontal();
+
+        EditorGUILayout.Space();
+        _dataList.DoLayoutList();
 
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)
@@ -114,5 +115,92 @@ public class BoardDataDrawer : Editor
             EditorGUILayout.EndVertical();
         }
         EditorGUILayout.EndHorizontal();
+    }
+
+    private void InitializeReordableList(ref ReorderableList list, string propertyName, string listLabel)
+    {
+        list = new ReorderableList (serializedObject, serializedObject.FindProperty(propertyName), 
+            true, true, true, true);
+
+        list.drawHeaderCallback = (Rect rect) =>
+        {
+            EditorGUI.LabelField(rect, listLabel);
+        };
+
+        var l = list;
+
+        list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+        {
+            var element = l.serializedProperty.GetArrayElementAtIndex(index);
+            rect.y += 2;
+            EditorGUI.PropertyField(
+                new Rect (rect.x, rect.y, EditorGUIUtility.labelWidth, EditorGUIUtility.singleLineHeight),
+                element.FindPropertyRelative("word"), GUIContent.none
+                );
+        };
+    }
+
+    private void ConvertToUpperButton()
+    {
+        if (GUILayout.Button("To Upper"))
+        {
+            for (var i = 0; i < gameDataInstance.columns; i++)
+            {
+                for (var j = 0; j < gameDataInstance.rows; j++)
+                {
+                    var errorCounter = Regex.Matches(gameDataInstance.board[i].row[j], @"[a-z]").Count;
+
+                    if (errorCounter > 0)
+                    {
+                        gameDataInstance.board[i].row[j] = gameDataInstance.board[i].row[j].ToUpper();
+                    }
+                }
+            }
+
+            foreach (var searchWord in gameDataInstance.searchWords)
+            {
+                var errorCounter = Regex.Matches(searchWord.word, @"[a-z]").Count;
+
+                if (errorCounter > 0)
+                {
+                    searchWord.word = searchWord.word.ToUpper();
+                }
+            }
+        }
+    }
+
+    private void ClearBoardButton()
+    {
+        if (GUILayout.Button("Clear Board"))
+        {
+            for (int i = 0; i < gameDataInstance.columns; i++)
+            {
+                for (int j = 0; j < gameDataInstance.rows; j++)
+                {
+                    gameDataInstance.board[i].row[j] = " ";
+                }
+            }
+        }
+    }
+
+    private void FillUpWithRandomLettersButton()
+    {
+        if (GUILayout.Button("Fill Up With Random Letters"))
+        {
+            for (int i = 0; i < gameDataInstance.columns; i++)
+            {
+                for (int j = 0; j < gameDataInstance.rows; j++)
+                {
+                    int errorCounter = Regex.Matches(gameDataInstance.board[i].row[j], @"[a-zA-Z]").Count;
+                    string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    int index = Random.Range(0, letters.Length);
+
+                    if (errorCounter == 0)
+                    {
+                        gameDataInstance.board[i].row[j] = letters[index].ToString();
+                    }
+                }
+            }
+        }
     }
 }

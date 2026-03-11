@@ -48,6 +48,7 @@ public class BoardData : ScriptableObject
     public int rows = 0;
 
     public BoardRow[] board;
+    public List<SearchingWord> searchWords = new List<SearchingWord> ();
 
     public void ClearWithEmptyString()
     {
