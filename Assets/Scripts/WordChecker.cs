@@ -7,6 +7,7 @@ using UnityEngine;
 public class WordChecker : MonoBehaviour
 {
     public GameData currentGameData;
+    public GameLevelData gameLevelData;
 
     private string _word;
 
@@ -16,17 +17,20 @@ public class WordChecker : MonoBehaviour
     private Ray _rayLeft, _rayRight;
     private Ray _rayDiagonalLeftUp, _rayDiagonalLeftDown;
     private Ray _rayDiagonalRightUp, _rayDiagonalRightDown;
+    private Ray _currentRay = new Ray();
     private Vector3 _rayStartPosition;
     private List<int> _correctSquareList = new List<int>();
 
     private void OnEnable()
     {
         GameEvents.OnCheckSquare += SquareSelected;
+        GameEvents.OnClearSelection += ClearSelection;
     }
 
     private void OnDisable()
     {
         GameEvents.OnCheckSquare -= SquareSelected;
+        GameEvents.OnClearSelection -= ClearSelection;
     }
 
     void Start()
@@ -37,7 +41,17 @@ public class WordChecker : MonoBehaviour
 
     void Update()
     {
-        
+        if (_assignedPoints > 0 && Application.isEditor)
+        {
+            Debug.DrawRay(_rayUp.origin, _rayUp.direction * 4);
+            Debug.DrawRay(_rayDown.origin, _rayDown.direction * 4);
+            Debug.DrawRay(_rayLeft.origin, _rayLeft.direction * 4);
+            Debug.DrawRay(_rayRight.origin, _rayRight.direction * 4);
+            Debug.DrawRay(_rayDiagonalLeftUp.origin, _rayDiagonalLeftUp.direction * 4);
+            Debug.DrawRay(_rayDiagonalLeftDown.origin, _rayDiagonalLeftDown.direction * 4);
+            Debug.DrawRay(_rayDiagonalRightUp.origin, _rayDiagonalRightUp.direction * 4);
+            Debug.DrawRay(_rayDiagonalRightDown.origin, _rayDiagonalRightDown.direction * 4);
+        }
     }
 
     private void SquareSelected(string letter, Vector3 squarePosition, int squareIndex)
@@ -57,10 +71,26 @@ public class WordChecker : MonoBehaviour
             _rayDiagonalRightUp = new Ray(new Vector2(squarePosition.x, squarePosition.y), new Vector2 (1, 1));
             _rayDiagonalRightDown = new Ray(new Vector2(squarePosition.x, squarePosition.y), new Vector2 (1, -1));
         }
+        else if (_assignedPoints == 1)
+        {
+            _correctSquareList.Add(squareIndex);
+            _currentRay = SelectRay(_rayStartPosition, squarePosition);
+            GameEvents.SelectSquareMethod(squarePosition);
+            _word += letter;
+            CheckWord();
+        }
+        else
+        {
+            if (IsPointOnTheRay(_currentRay, squarePosition))
+            {
+                _correctSquareList.Add(squareIndex);
+                GameEvents.SelectSquareMethod(squarePosition);
+                _word += letter;
+                CheckWord();
+            }
+        }
 
-        GameEvents.SelectSquareMethod(squarePosition);
-        _word += letter;
-        CheckWord();
+        _assignedPoints++;
     }
 
     private void CheckWord()
@@ -69,7 +99,9 @@ public class WordChecker : MonoBehaviour
         {
             if (_word == searchingWord.word)
             {
+                GameEvents.CorrectWordMethod(_word, _correctSquareList);
                 _word = string.Empty;
+                _correctSquareList.Clear();
                 return;
             }
         }
@@ -128,5 +160,34 @@ public class WordChecker : MonoBehaviour
         }
 
         return _rayDown;
+    }
+
+    private void ClearSelection()
+    {
+        _assignedPoints = 0;
+        _correctSquareList.Clear();
+        _word = string.Empty;
+    }
+
+    private void CheckBoardCompleted()
+    {
+        bool loadNextLevel = false;
+
+        if (currentGameData.selectedBoardData.searchWords.Count == _completedWords)
+        {
+            var categoryName = currentGameData.selectedCategoryName;
+            var currentBoardIndex = DataSaver.ReadCategoryCurrentIndexValues(categoryName);
+            var nextBoardIndex = -1;
+            var currentCategoryIndex = 0;
+            bool readNextLevelName = false;
+
+            for (int index = 0; index < gameLevelData.data.Count; index++)
+            {
+                if (readNextLevelName)
+                {
+                    
+                }
+            }
+        }
     }
 }

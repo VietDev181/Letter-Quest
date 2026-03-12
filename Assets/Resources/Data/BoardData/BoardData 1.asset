@@ -13,46 +13,77 @@ MonoBehaviour:
   m_Name: BoardData 1
   m_EditorClassIdentifier: 
   timeInSeconds: 0
-  columns: 5
-  rows: 5
+  columns: 7
+  rows: 7
   board:
-  - size: 5
+  - size: 7
     row:
-    - Q
-    - W
-    - Y
-    - G
-    - N
-  - size: 5
-    row:
-    - R
-    - Y
-    - F
     - S
-    - L
-  - size: 5
-    row:
-    - W
-    - J
-    - B
+    - U
     - M
-    - K
-  - size: 5
+    - M
+    - E
+    - R
+    - I
+  - size: 7
     row:
     - U
+    - Q
+    - R
     - G
+    - O
+    - U
+    - O
+  - size: 7
+    row:
+    - R
+    - F
+    - Q
+    - G
+    - S
+    - Z
+    - Z
+  - size: 7
+    row:
+    - P
+    - W
+    - E
+    - V
+    - P
+    - M
+    - D
+  - size: 7
+    row:
+    - G
+    - U
+    - Q
+    - D
+    - T
     - K
     - T
-    - P
-  - size: 5
+  - size: 7
     row:
-    - A
     - O
-    - E
-    - T
+    - P
+    - W
+    - A
+    - R
+    - A
+    - Z
+  - size: 7
+    row:
+    - D
+    - N
+    - M
+    - W
+    - C
     - I
+    - C
   searchWords:
   - word: SUMMER
-  - word: WINTER
-  - word: WINTER
+  - word: ANIMAL
+  - word: CAT
+  - word: DOG
+  - word: UNITY
+  - word: CODING
   - word: WINTER
