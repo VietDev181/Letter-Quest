@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Sport 2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 7
+  rows: 7
+  board:
+  - size: 7
+    row:
+    - Y
+    - X
+    - P
+    - S
+    - C
+    - H
+    - I
+  - size: 7
+    row:
+    - B
+    - O
+    - X
+    - I
+    - N
+    - G
+    - T
+  - size: 7
+    row:
+    - G
+    - I
+    - Q
+    - N
+    - Z
+    - N
+    - W
+  - size: 7
+    row:
+    - U
+    - K
+    - H
+    - N
+    - V
+    - N
+    - V
+  - size: 7
+    row:
+    - R
+    - U
+    - J
+    - E
+    - M
+    - R
+    - P
+  - size: 7
+    row:
+    - J
+    - D
+    - I
+    - T
+    - O
+    - F
+    - L
+  - size: 7
+    row:
+    - D
+    - E
+    - T
+    - A
+    - R
+    - A
+    - K
+  searchWords:
+  - word: TENNIS
+  - word: BOXING
+  - word: KARATE
+  - word: RUGBY

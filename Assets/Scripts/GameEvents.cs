@@ -68,4 +68,55 @@ public static class GameEvents
             OnCorrectWord(word, squareIndexes);
         }
     }
+
+
+    public delegate void BoardCompleted();
+    public static event BoardCompleted OnBoardCompleted;
+    public static void BoardCompletedMethod()
+    {
+        if (OnBoardCompleted != null)
+        {
+            OnBoardCompleted();
+        }
+    }
+
+
+    public delegate void UnlockNextCategory();
+    public static event BoardCompleted OnUnlockNextCategory;
+    public static void UnlockNextCategoryMethod()
+    {
+        if (OnUnlockNextCategory != null)
+        {
+            OnUnlockNextCategory();
+        }
+    }
+
+
+    public delegate void LoadNextLevel();
+    public static event BoardCompleted OnLoadNextLevel;
+    public static void LoadNextLevelMethod()
+    {
+        if (OnLoadNextLevel != null)
+        {
+            OnLoadNextLevel();
+        }
+    }
+
+
+    public delegate void GameOver();
+    public static event GameOver OnGameOver;
+    public static void GameOverMethod()
+    {
+        if (OnGameOver != null)
+        {
+            OnGameOver();
+        }
+    }
+
+    public delegate void CategoryCompleted();
+    public static event CategoryCompleted OnCategoryCompleted;
+    public static void CategoryCompletedMethod()
+    {
+        OnCategoryCompleted?.Invoke();
+    }
 }

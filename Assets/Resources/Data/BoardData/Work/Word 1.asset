@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Word 1
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 6
+  rows: 6
+  board:
+  - size: 6
+    row:
+    - L
+    - Z
+    - K
+    - S
+    - U
+    - I
+  - size: 6
+    row:
+    - T
+    - V
+    - F
+    - E
+    - H
+    - C
+  - size: 6
+    row:
+    - O
+    - Q
+    - D
+    - R
+    - K
+    - Y
+  - size: 6
+    row:
+    - L
+    - U
+    - W
+    - U
+    - J
+    - X
+  - size: 6
+    row:
+    - I
+    - B
+    - H
+    - N
+    - F
+    - X
+  - size: 6
+    row:
+    - P
+    - C
+    - G
+    - J
+    - E
+    - X
+  searchWords:
+  - word: CHEF
+  - word: NURSE
+  - word: PILOT

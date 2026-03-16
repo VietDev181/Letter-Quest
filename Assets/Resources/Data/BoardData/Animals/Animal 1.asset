@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Animal 1
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 6
+  rows: 6
+  board:
+  - size: 6
+    row:
+    - H
+    - I
+    - U
+    - Y
+    - I
+    - Q
+  - size: 6
+    row:
+    - E
+    - E
+    - I
+    - D
+    - C
+    - S
+  - size: 6
+    row:
+    - J
+    - A
+    - C
+    - N
+    - O
+    - B
+  - size: 6
+    row:
+    - U
+    - H
+    - A
+    - F
+    - W
+    - G
+  - size: 6
+    row:
+    - E
+    - T
+    - T
+    - J
+    - P
+    - O
+  - size: 6
+    row:
+    - P
+    - J
+    - Z
+    - P
+    - A
+    - A
+  searchWords:
+  - word: CAT
+  - word: DOG
+  - word: COW

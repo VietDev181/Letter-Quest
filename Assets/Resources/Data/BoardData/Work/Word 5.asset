@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Word 5
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 12
+  rows: 12
+  board:
+  - size: 12
+    row:
+    - V
+    - W
+    - T
+    - S
+    - I
+    - L
+    - A
+    - N
+    - R
+    - U
+    - O
+    - J
+  - size: 12
+    row:
+    - W
+    - Z
+    - S
+    - Q
+    - S
+    - O
+    - W
+    - T
+    - S
+    - F
+    - I
+    - N
+  - size: 12
+    row:
+    - T
+    - Y
+    - I
+    - N
+    - F
+    - O
+    - I
+    - V
+    - V
+    - I
+    - Q
+    - A
+  - size: 12
+    row:
+    - S
+    - Y
+    - T
+    - C
+    - E
+    - T
+    - I
+    - H
+    - C
+    - R
+    - A
+    - I
+  - size: 12
+    row:
+    - I
+    - M
+    - N
+    - G
+    - S
+    - M
+    - C
+    - O
+    - U
+    - E
+    - B
+    - C
+  - size: 12
+    row:
+    - C
+    - Q
+    - E
+    - G
+    - X
+    - S
+    - G
+    - E
+    - E
+    - F
+    - Y
+    - I
+  - size: 12
+    row:
+    - A
+    - Q
+    - I
+    - L
+    - W
+    - R
+    - N
+    - T
+    - G
+    - I
+    - F
+    - R
+  - size: 12
+    row:
+    - M
+    - A
+    - C
+    - F
+    - M
+    - U
+    - V
+    - G
+    - U
+    - G
+    - J
+    - T
+  - size: 12
+    row:
+    - R
+    - R
+    - S
+    - I
+    - B
+    - W
+    - A
+    - E
+    - O
+    - H
+    - Z
+    - C
+  - size: 12
+    row:
+    - A
+    - D
+    - A
+    - N
+    - O
+    - E
+    - Y
+    - L
+    - Y
+    - T
+    - L
+    - E
+  - size: 12
+    row:
+    - H
+    - B
+    - C
+    - A
+    - J
+    - F
+    - M
+    - G
+    - F
+    - E
+    - D
+    - L
+  - size: 12
+    row:
+    - P
+    - R
+    - O
+    - G
+    - R
+    - A
+    - M
+    - M
+    - E
+    - R
+    - Z
+    - E
+  searchWords:
+  - word: ARCHITECT
+  - word: SCIENTIST
+  - word: PHARMACIST
+  - word: FIREFIGHTER
+  - word: ELECTRICIAN
+  - word: JOURNALIST
+  - word: PROGRAMMER

@@ -12,132 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
   m_Name: Food 1
   m_EditorClassIdentifier: 
-  timeInSeconds: 0
-  columns: 10
-  rows: 10
+  timeInSeconds: 120
+  columns: 6
+  rows: 6
   board:
-  - size: 10
-    row:
-    - P
-    - A
-    - S
-    - T
-    - A
-    - K
-    - H
-    - C
-    - M
-    - K
-  - size: 10
+  - size: 6
     row:
     - R
     - I
-    - V
-    - N
+    - C
+    - E
+    - B
+    - T
+  - size: 6
+    row:
+    - Q
+    - Q
+    - A
     - T
     - F
-    - D
-    - V
-    - K
-    - L
-  - size: 10
-    row:
-    - I
-    - A
-    - Z
-    - L
-    - H
-    - A
-    - C
-    - D
-    - B
-    - V
-  - size: 10
+    - O
+  - size: 6
     row:
     - N
-    - T
-    - S
-    - Z
-    - Y
-    - I
-    - D
-    - O
-    - W
-    - S
-  - size: 10
-    row:
-    - R
-    - V
     - X
-    - S
-    - A
-    - R
-    - F
-    - L
-    - R
-    - H
-  - size: 10
-    row:
-    - T
-    - G
-    - O
-    - D
-    - D
-    - C
-    - I
-    - P
-    - P
-    - G
-  - size: 10
-    row:
-    - Y
-    - A
-    - P
-    - W
-    - B
-    - S
-    - T
-    - E
-    - A
     - K
-  - size: 10
-    row:
-    - E
-    - W
-    - F
-    - T
-    - Q
-    - W
-    - V
-    - G
-    - F
+    - K
+    - P
     - Y
-  - size: 10
+  - size: 6
     row:
-    - B
-    - R
-    - E
-    - A
-    - D
-    - C
-    - S
-    - Q
-    - Z
-    - M
-  - size: 10
-    row:
-    - N
-    - F
-    - H
-    - B
     - J
+    - Q
+    - E
+    - U
+    - V
+    - U
+  - size: 6
+    row:
+    - J
+    - Q
+    - O
+    - B
+    - P
+    - E
+  - size: 6
+    row:
     - F
-    - R
-    - P
-    - A
-    - P
+    - S
+    - X
+    - K
+    - T
+    - T
   searchWords:
-  - word: BREAD
-  - word: PIZZA
-  - word: PASTA
-  - word: STEAK
+  - word: RICE
+  - word: CAKE
+  - word: SOUP

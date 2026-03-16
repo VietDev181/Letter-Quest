@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Hobbies 2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 7
+  rows: 7
+  board:
+  - size: 7
+    row:
+    - I
+    - Y
+    - F
+    - F
+    - E
+    - I
+    - N
+  - size: 7
+    row:
+    - N
+    - T
+    - N
+    - I
+    - A
+    - P
+    - X
+  - size: 7
+    row:
+    - E
+    - C
+    - S
+    - F
+    - W
+    - Y
+    - W
+  - size: 7
+    row:
+    - R
+    - O
+    - D
+    - J
+    - R
+    - A
+    - T
+  - size: 7
+    row:
+    - T
+    - O
+    - L
+    - K
+    - I
+    - C
+    - V
+  - size: 7
+    row:
+    - S
+    - K
+    - N
+    - Q
+    - T
+    - E
+    - Y
+  - size: 7
+    row:
+    - D
+    - A
+    - N
+    - C
+    - E
+    - Q
+    - Z
+  searchWords:
+  - word: DANCE
+  - word: PAINT
+  - word: COOK
+  - word: WRITE

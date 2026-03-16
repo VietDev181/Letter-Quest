@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Animal 2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 7
+  rows: 7
+  board:
+  - size: 7
+    row:
+    - H
+    - W
+    - N
+    - W
+    - U
+    - N
+    - S
+  - size: 7
+    row:
+    - Z
+    - G
+    - O
+    - L
+    - E
+    - F
+    - Y
+  - size: 7
+    row:
+    - P
+    - L
+    - B
+    - W
+    - R
+    - L
+    - I
+  - size: 7
+    row:
+    - F
+    - H
+    - M
+    - E
+    - E
+    - G
+    - P
+  - size: 7
+    row:
+    - K
+    - B
+    - G
+    - R
+    - A
+    - S
+    - B
+  - size: 7
+    row:
+    - L
+    - I
+    - O
+    - N
+    - U
+    - R
+    - C
+  - size: 7
+    row:
+    - T
+    - R
+    - I
+    - Q
+    - T
+    - G
+    - I
+  searchWords:
+  - word: TIGER
+  - word: LION
+  - word: BEAR
+  - word: WOLF

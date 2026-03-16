@@ -10,80 +10,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
-  m_Name: BoardData 1
+  m_Name: Countries 2
   m_EditorClassIdentifier: 
-  timeInSeconds: 0
+  timeInSeconds: 120
   columns: 7
   rows: 7
   board:
   - size: 7
     row:
+    - D
     - S
     - U
-    - M
-    - M
-    - E
-    - R
-    - I
-  - size: 7
-    row:
-    - U
-    - Q
-    - R
-    - G
-    - O
-    - U
-    - O
-  - size: 7
-    row:
-    - R
-    - F
-    - Q
-    - G
-    - S
-    - Z
-    - Z
-  - size: 7
-    row:
-    - P
-    - W
-    - E
     - V
-    - P
-    - M
-    - D
-  - size: 7
-    row:
-    - G
-    - U
-    - Q
-    - D
-    - T
-    - K
-    - T
-  - size: 7
-    row:
     - O
-    - P
-    - W
-    - A
-    - R
-    - A
-    - Z
+    - V
+    - C
   - size: 7
     row:
+    - I
+    - T
+    - R
+    - M
+    - F
+    - H
+    - D
+  - size: 7
+    row:
+    - J
+    - N
+    - G
+    - Q
+    - I
+    - A
+    - S
+  - size: 7
+    row:
+    - A
+    - E
     - D
     - N
-    - M
-    - W
-    - C
+    - X
+    - R
+    - Y
+  - size: 7
+    row:
+    - S
+    - P
+    - A
     - I
-    - C
+    - N
+    - M
+    - M
+  - size: 7
+    row:
+    - H
+    - S
+    - Z
+    - N
+    - A
+    - J
+    - H
+  - size: 7
+    row:
+    - D
+    - G
+    - N
+    - A
+    - P
+    - A
+    - J
   searchWords:
-  - word: SUMMER
-  - word: ANIMAL
-  - word: CAT
-  - word: DOG
-  - word: UNITY
-  - word: CODING
-  - word: WINTER
+  - word: CHINA
+  - word: INDIA
+  - word: JAPAN
+  - word: SPAIN

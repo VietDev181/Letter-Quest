@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Countries 5
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 10
+  rows: 10
+  board:
+  - size: 10
+    row:
+    - V
+    - G
+    - J
+    - H
+    - K
+    - I
+    - J
+    - P
+    - Z
+    - I
+  - size: 10
+    row:
+    - X
+    - I
+    - V
+    - K
+    - G
+    - B
+    - V
+    - O
+    - Y
+    - N
+  - size: 10
+    row:
+    - A
+    - A
+    - E
+    - W
+    - N
+    - X
+    - E
+    - R
+    - B
+    - D
+  - size: 10
+    row:
+    - I
+    - I
+    - U
+    - T
+    - K
+    - U
+    - E
+    - T
+    - N
+    - O
+  - size: 10
+    row:
+    - S
+    - G
+    - V
+    - S
+    - N
+    - W
+    - J
+    - U
+    - Z
+    - N
+  - size: 10
+    row:
+    - Y
+    - O
+    - Z
+    - G
+    - S
+    - A
+    - Y
+    - G
+    - X
+    - E
+  - size: 10
+    row:
+    - A
+    - R
+    - Z
+    - U
+    - M
+    - O
+    - M
+    - A
+    - N
+    - S
+  - size: 10
+    row:
+    - L
+    - J
+    - U
+    - J
+    - N
+    - W
+    - A
+    - L
+    - O
+    - I
+  - size: 10
+    row:
+    - A
+    - A
+    - U
+    - S
+    - T
+    - R
+    - A
+    - L
+    - I
+    - A
+  - size: 10
+    row:
+    - M
+    - N
+    - B
+    - U
+    - Z
+    - E
+    - V
+    - L
+    - A
+    - R
+  searchWords:
+  - word: VIETNAM
+  - word: AUSTRALIA
+  - word: LAOS
+  - word: INDONESIA
+  - word: PORTUGAL
+  - word: OMAN
+  - word: MALAYSIA

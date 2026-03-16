@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8d2bb07ea449f4ac93a4f09268450, type: 3}
+  m_Name: Food 4
+  m_EditorClassIdentifier: 
+  timeInSeconds: 120
+  columns: 9
+  rows: 9
+  board:
+  - size: 9
+    row:
+    - S
+    - P
+    - A
+    - N
+    - D
+    - E
+    - T
+    - T
+    - I
+  - size: 9
+    row:
+    - H
+    - A
+    - M
+    - B
+    - U
+    - R
+    - G
+    - E
+    - R
+  - size: 9
+    row:
+    - Y
+    - Q
+    - N
+    - H
+    - S
+    - J
+    - X
+    - R
+    - A
+  - size: 9
+    row:
+    - S
+    - U
+    - F
+    - D
+    - O
+    - R
+    - F
+    - F
+    - W
+  - size: 9
+    row:
+    - D
+    - O
+    - I
+    - I
+    - W
+    - M
+    - Z
+    - P
+    - Z
+  - size: 9
+    row:
+    - P
+    - P
+    - V
+    - K
+    - M
+    - I
+    - X
+    - J
+    - O
+  - size: 9
+    row:
+    - G
+    - H
+    - B
+    - I
+    - T
+    - A
+    - C
+    - O
+    - O
+  - size: 9
+    row:
+    - E
+    - T
+    - A
+    - L
+    - O
+    - C
+    - O
+    - H
+    - C
+  - size: 9
+    row:
+    - C
+    - R
+    - O
+    - I
+    - S
+    - S
+    - A
+    - N
+    - T
+  searchWords:
+  - word: SPAGHETTI
+  - word: SANDWICH
+  - word: CHOCOLATE
+  - word: HAMBURGER
+  - word: CROISSANT
+  - word: TACO
